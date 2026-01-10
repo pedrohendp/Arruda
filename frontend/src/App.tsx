@@ -15,7 +15,6 @@ function App() {
   const [skillCategories, setSkillCategories] = useState<SkillCategory[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -30,7 +29,6 @@ function App() {
         setProjects(projectsData);
       } catch (err) {
         console.error('Failed to fetch data:', err);
-        setError('Failed to load portfolio data. Please make sure the API is running.');
       } finally {
         setIsLoading(false);
       }
@@ -69,45 +67,6 @@ function App() {
           }
           @keyframes spin {
             to { transform: rotate(360deg); }
-          }
-        `}</style>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="error-screen">
-        <div className="error-content">
-          <h1>Connection Error</h1>
-          <p>{error}</p>
-          <code>Make sure to run: dotnet run</code>
-        </div>
-        <style>{`
-          .error-screen {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #1a1a1a;
-          }
-          .error-content {
-            text-align: center;
-            color: #b3b3b3;
-            max-width: 400px;
-            padding: 2rem;
-          }
-          .error-content h1 {
-            color: #f93e3e;
-            margin-bottom: 1rem;
-          }
-          .error-content code {
-            display: block;
-            margin-top: 1rem;
-            padding: 1rem;
-            background-color: #252525;
-            border-radius: 8px;
-            color: #49cc90;
           }
         `}</style>
       </div>
