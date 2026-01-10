@@ -1,0 +1,142 @@
+{
+  "developer": {
+    "name": "Pedro Arruda",
+    "title": "Backend Developer",
+    "subtitle": "C# & .NET Specialist",
+    "email": "pedrohendp@gmail.com",
+    "bio": "Desenvolvedor backend apaixonado por criar soluções robustas e escaláveis. Especialista em C# e ecossistema .NET, com experiência em arquitetura de sistemas, APIs RESTful e bancos de dados relacionais. Focado em escrever código limpo, testável e de alta performance.",
+    "location": "Brasil",
+    "organization": "@eSolutionTecnologia",
+    "profileImage": "/images/profile.jpg",
+    "resumeUrl": "/documents/Pedro-Arruda-CV.pdf",
+    "social": {
+      "linkedIn": "https://linkedin.com/in/pedrohendp",
+      "gitHub": "https://github.com/pedrohendp",
+      "instagram": "https://instagram.com/pedrohendp",
+      "twitter": "https://twitter.com/pedrohendp"
+    },
+    "stats": {
+      "yearsOfExperience": 5,
+      "projectsDelivered": 20,
+      "technologiesMastered": 15
+    }
+  },
+  "skillCategories": [
+    {
+      "name": "Backend",
+      "color": "#49cc90",
+      "httpMethod": "GET",
+      "skills": [
+        { "name": "C#", "level": 95, "icon": "csharp" },
+        { "name": "ASP.NET Core", "level": 90, "icon": "dotnet" },
+        { "name": ".NET Framework", "level": 90, "icon": "dotnet" },
+        { "name": "Entity Framework Core", "level": 85, "icon": "database" },
+        { "name": "NHibernate", "level": 80, "icon": "database" }
+      ]
+    },
+    {
+      "name": "Desktop & Mobile",
+      "color": "#61affe",
+      "httpMethod": "POST",
+      "skills": [
+        { "name": "Windows Forms", "level": 80, "icon": "windows" },
+        { "name": "WPF/XAML", "level": 75, "icon": "xaml" },
+        { "name": "Xamarin/.NET MAUI", "level": 70, "icon": "mobile" }
+      ]
+    },
+    {
+      "name": "Databases",
+      "color": "#f5a623",
+      "httpMethod": "PUT",
+      "skills": [
+        { "name": "SQL Server", "level": 85, "icon": "sqlserver" },
+        { "name": "Oracle", "level": 75, "icon": "oracle" },
+        { "name": "SQLite", "level": 75, "icon": "sqlite" }
+      ]
+    },
+    {
+      "name": "Frontend & Other",
+      "color": "#9012fe",
+      "httpMethod": "PATCH",
+      "skills": [
+        { "name": "JavaScript", "level": 65, "icon": "javascript" },
+        { "name": "CSS3", "level": 60, "icon": "css" },
+        { "name": "Python", "level": 50, "icon": "python" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "portfolio-api",
+      "name": "Portfolio API",
+      "description": "API RESTful para portfólio pessoal desenvolvida com ASP.NET Core Minimal API",
+      "longDescription": "API moderna desenvolvida com ASP.NET Core 8 utilizando Minimal APIs. Implementa padrões REST, documentação Swagger/OpenAPI e arquitetura limpa com separação de responsabilidades.",
+      "imageUrl": "/images/projects/portfolio-api.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/Portfolio-Pedro-Arruda",
+      "technologies": ["C#", ".NET 8", "Minimal API", "Swagger"],
+      "status": "Concluído",
+      "featured": true
+    },
+    {
+      "slug": "calculator-csharp",
+      "name": "Calculator in C#",
+      "description": "Primeira aplicação desenvolvida em C# - Calculadora funcional",
+      "longDescription": "Projeto inicial de aprendizado em C#. Calculadora com interface gráfica Windows Forms implementando operações matemáticas básicas e avançadas.",
+      "imageUrl": "/images/projects/calculator.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/Calculator-In-CSharp",
+      "technologies": ["C#", "Windows Forms", ".NET"],
+      "status": "Concluído",
+      "featured": true
+    },
+    {
+      "slug": "stopwatch-csharp",
+      "name": "Stopwatch in C#",
+      "description": "Aplicação de cronômetro com manipulação de strings e tempo",
+      "longDescription": "Cronômetro desenvolvido em C# demonstrando manipulação de tempo, formatação de strings e eventos de interface.",
+      "imageUrl": "/images/projects/stopwatch.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/Stopwatch-in-CSharp",
+      "technologies": ["C#", "Windows Forms", ".NET"],
+      "status": "Concluído",
+      "featured": false
+    },
+    {
+      "slug": "text-editor-csharp",
+      "name": "Text Editor in C#",
+      "description": "Editor de texto com gerenciamento de arquivos",
+      "longDescription": "Editor de texto completo desenvolvido em C# com funcionalidades de abrir, salvar, editar arquivos e formatação de texto.",
+      "imageUrl": "/images/projects/text-editor.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/Text-editor-in-CSharp",
+      "technologies": ["C#", "Windows Forms", ".NET", "File I/O"],
+      "status": "Concluído",
+      "featured": true
+    },
+    {
+      "slug": "form-animated",
+      "name": "Animated Form",
+      "description": "Formulário HTML/CSS com animações modernas",
+      "longDescription": "Formulário web responsivo com animações CSS modernas, validação visual e design atraente.",
+      "imageUrl": "/images/projects/form-animated.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/form-html-css-animated",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "status": "Concluído",
+      "featured": false
+    },
+    {
+      "slug": "profile-card",
+      "name": "Profile Card Contact",
+      "description": "Card de perfil com formulário de contato",
+      "longDescription": "Componente de card de perfil responsivo com integração de formulário de contato, desenvolvido com HTML e CSS puros.",
+      "imageUrl": "/images/projects/profile-card.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/profile-card-contactus-html-css",
+      "technologies": ["HTML5", "CSS3"],
+      "status": "Concluído",
+      "featured": false
+    }
+  ]
+}

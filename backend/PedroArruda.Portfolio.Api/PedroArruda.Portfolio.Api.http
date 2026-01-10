@@ -1,0 +1,6 @@
+@PedroArruda.Portfolio.Api_HostAddress = http://localhost:5150
+
+GET {{PedroArruda.Portfolio.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
