@@ -30,7 +30,7 @@ export function About({ developer }: AboutProps) {
 
             <div className={styles.responseBlock}>
               <p className={styles.bio}>
-                {developer?.bio || 'Desenvolvedor backend apaixonado por criar soluções robustas e escaláveis.'}
+                {developer?.bio || 'Desenvolvedor back-end .NET: C#, ASP.NET Core, SQL Server e Oracle.'}
               </p>
 
               <div className={styles.details}>

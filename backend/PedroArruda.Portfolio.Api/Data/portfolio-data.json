@@ -4,13 +4,13 @@
     "title": "Backend Developer",
     "subtitle": "C# & .NET Specialist",
     "email": "pedrohendp@gmail.com",
-    "bio": "Desenvolvedor backend apaixonado por criar soluções robustas e escaláveis. Especialista em C# e ecossistema .NET, com experiência em arquitetura de sistemas, APIs RESTful e bancos de dados relacionais. Focado em escrever código limpo, testável e de alta performance.",
-    "location": "Brasil",
+    "bio": "Desenvolvedor back-end .NET. Há quase 5 anos construo o back-end de sistemas de gestão que hotéis, parques e multipropriedades usam todos os dias. Trabalho com C#, ASP.NET Core, Entity Framework, NHibernate e Dapper, sobre SQL Server e Oracle. Fora do expediente, crio ferramentas de IA, como servidores MCP.",
+    "location": "Caldas Novas, GO, Brasil",
     "organization": "@eSolutionTecnologia",
     "profileImage": "/images/profile.jpg",
     "resumeUrl": "/documents/Pedro-Arruda-CV.pdf",
     "social": {
-      "linkedIn": "https://linkedin.com/in/pedrohendp",
+      "linkedIn": "https://www.linkedin.com/in/pedrohendp/",
       "gitHub": "https://github.com/pedrohendp",
       "instagram": "https://instagram.com/pedrohendp",
       "twitter": "https://twitter.com/pedrohendp"
@@ -27,21 +27,63 @@
       "color": "#49cc90",
       "httpMethod": "GET",
       "skills": [
-        { "name": "C#", "level": 95, "icon": "csharp" },
-        { "name": "ASP.NET Core", "level": 90, "icon": "dotnet" },
-        { "name": ".NET Framework", "level": 90, "icon": "dotnet" },
-        { "name": "Entity Framework Core", "level": 85, "icon": "database" },
-        { "name": "NHibernate", "level": 80, "icon": "database" }
+        {
+          "name": "C#",
+          "level": 95,
+          "icon": "csharp"
+        },
+        {
+          "name": "ASP.NET Core",
+          "level": 90,
+          "icon": "dotnet"
+        },
+        {
+          "name": ".NET Framework",
+          "level": 90,
+          "icon": "dotnet"
+        },
+        {
+          "name": "Entity Framework Core",
+          "level": 85,
+          "icon": "database"
+        },
+        {
+          "name": "NHibernate",
+          "level": 80,
+          "icon": "database"
+        },
+        {
+          "name": "Dapper",
+          "level": 80,
+          "icon": "database"
+        }
       ]
     },
     {
-      "name": "Desktop & Mobile",
+      "name": "DevOps & Automação",
       "color": "#61affe",
       "httpMethod": "POST",
       "skills": [
-        { "name": "Windows Forms", "level": 80, "icon": "windows" },
-        { "name": "WPF/XAML", "level": 75, "icon": "xaml" },
-        { "name": "Xamarin/.NET MAUI", "level": 70, "icon": "mobile" }
+        {
+          "name": "Git",
+          "level": 85,
+          "icon": "git"
+        },
+        {
+          "name": "Docker",
+          "level": 70,
+          "icon": "docker"
+        },
+        {
+          "name": "n8n",
+          "level": 70,
+          "icon": "automation"
+        },
+        {
+          "name": "LLMs / MCP",
+          "level": 65,
+          "icon": "ai"
+        }
       ]
     },
     {
@@ -49,9 +91,21 @@
       "color": "#f5a623",
       "httpMethod": "PUT",
       "skills": [
-        { "name": "SQL Server", "level": 85, "icon": "sqlserver" },
-        { "name": "Oracle", "level": 75, "icon": "oracle" },
-        { "name": "SQLite", "level": 75, "icon": "sqlite" }
+        {
+          "name": "SQL Server",
+          "level": 85,
+          "icon": "sqlserver"
+        },
+        {
+          "name": "Oracle",
+          "level": 75,
+          "icon": "oracle"
+        },
+        {
+          "name": "SQLite",
+          "level": 75,
+          "icon": "sqlite"
+        }
       ]
     },
     {
@@ -59,84 +113,98 @@
       "color": "#9012fe",
       "httpMethod": "PATCH",
       "skills": [
-        { "name": "JavaScript", "level": 65, "icon": "javascript" },
-        { "name": "CSS3", "level": 60, "icon": "css" },
-        { "name": "Python", "level": 50, "icon": "python" }
+        {
+          "name": "JavaScript",
+          "level": 65,
+          "icon": "javascript"
+        },
+        {
+          "name": "TypeScript",
+          "level": 65,
+          "icon": "typescript"
+        },
+        {
+          "name": "CSS3",
+          "level": 60,
+          "icon": "css"
+        },
+        {
+          "name": "Python",
+          "level": 50,
+          "icon": "python"
+        }
       ]
     }
   ],
   "projects": [
     {
+      "slug": "desktop-automation",
+      "name": "Desktop Automation MCP",
+      "description": "Servidor MCP que deixa agentes de IA, como o Claude, controlarem qualquer app desktop do Windows",
+      "longDescription": "Servidor Model Context Protocol em Rust que usa a API de UI Automation do Windows para encontrar janelas, clicar em botões, digitar, ler valores e grids e capturar a tela de apps WinForms, WPF, Win32 e Electron.",
+      "imageUrl": "/images/projects/desktop-automation.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/desktop-automation",
+      "technologies": [
+        "Rust",
+        "MCP",
+        "Windows UI Automation"
+      ],
+      "status": "Concluído",
+      "featured": true
+    },
+    {
+      "slug": "openchamber-claude-account-switcher",
+      "name": "Claude Account Switcher",
+      "description": "Extensão do OpenChamber para manter vários logins do Claude Code e alternar entre eles com um clique",
+      "longDescription": "Extensão em TypeScript para o OpenChamber que guarda várias contas do Claude Code e troca a conta ativa com um clique, pelo painel Work Status ou por um painel lateral.",
+      "imageUrl": "/images/projects/openchamber-claude-account-switcher.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/openchamber-claude-account-switcher",
+      "technologies": [
+        "TypeScript",
+        "Claude Code",
+        "OpenChamber"
+      ],
+      "status": "Em evolução",
+      "featured": true
+    },
+    {
+      "slug": "livraria-tech",
+      "name": "LivrariaTech API",
+      "description": "API REST para uma livraria de tecnologia, com autenticação JWT e filtro paginado",
+      "longDescription": "API em C# e .NET 9 para gerenciar o catálogo de uma livraria de tecnologia: cadastro e login de usuários com JWT e BCrypt, filtro de livros por título com paginação e documentação no Swagger, sobre SQLite com Entity Framework Core.",
+      "imageUrl": "/images/projects/livraria-tech.png",
+      "demoUrl": "",
+      "gitHubUrl": "https://github.com/pedrohendp/LivrariaTech",
+      "technologies": [
+        "C#",
+        ".NET 9",
+        "EF Core",
+        "JWT",
+        "SQLite",
+        "Swagger"
+      ],
+      "status": "Concluído",
+      "featured": true
+    },
+    {
       "slug": "portfolio-api",
       "name": "Portfolio API",
-      "description": "API RESTful para portfólio pessoal desenvolvida com ASP.NET Core Minimal API",
-      "longDescription": "API moderna desenvolvida com ASP.NET Core 8 utilizando Minimal APIs. Implementa padrões REST, documentação Swagger/OpenAPI e arquitetura limpa com separação de responsabilidades.",
+      "description": "Este portfólio: API RESTful em ASP.NET Core Minimal API com front-end em React",
+      "longDescription": "API desenvolvida com ASP.NET Core 8 usando Minimal APIs, com documentação Swagger/OpenAPI, e front-end em React e TypeScript publicado no GitHub Pages.",
       "imageUrl": "/images/projects/portfolio-api.png",
       "demoUrl": "",
-      "gitHubUrl": "https://github.com/pedrohendp/Portfolio-Pedro-Arruda",
-      "technologies": ["C#", ".NET 8", "Minimal API", "Swagger"],
+      "gitHubUrl": "https://github.com/pedrohendp/Arruda",
+      "technologies": [
+        "C#",
+        ".NET 8",
+        "Minimal API",
+        "React",
+        "TypeScript"
+      ],
       "status": "Concluído",
       "featured": true
-    },
-    {
-      "slug": "calculator-csharp",
-      "name": "Calculator in C#",
-      "description": "Primeira aplicação desenvolvida em C# - Calculadora funcional",
-      "longDescription": "Projeto inicial de aprendizado em C#. Calculadora com interface gráfica Windows Forms implementando operações matemáticas básicas e avançadas.",
-      "imageUrl": "/images/projects/calculator.png",
-      "demoUrl": "",
-      "gitHubUrl": "https://github.com/pedrohendp/Calculator-In-CSharp",
-      "technologies": ["C#", "Windows Forms", ".NET"],
-      "status": "Concluído",
-      "featured": true
-    },
-    {
-      "slug": "stopwatch-csharp",
-      "name": "Stopwatch in C#",
-      "description": "Aplicação de cronômetro com manipulação de strings e tempo",
-      "longDescription": "Cronômetro desenvolvido em C# demonstrando manipulação de tempo, formatação de strings e eventos de interface.",
-      "imageUrl": "/images/projects/stopwatch.png",
-      "demoUrl": "",
-      "gitHubUrl": "https://github.com/pedrohendp/Stopwatch-in-CSharp",
-      "technologies": ["C#", "Windows Forms", ".NET"],
-      "status": "Concluído",
-      "featured": false
-    },
-    {
-      "slug": "text-editor-csharp",
-      "name": "Text Editor in C#",
-      "description": "Editor de texto com gerenciamento de arquivos",
-      "longDescription": "Editor de texto completo desenvolvido em C# com funcionalidades de abrir, salvar, editar arquivos e formatação de texto.",
-      "imageUrl": "/images/projects/text-editor.png",
-      "demoUrl": "",
-      "gitHubUrl": "https://github.com/pedrohendp/Text-editor-in-CSharp",
-      "technologies": ["C#", "Windows Forms", ".NET", "File I/O"],
-      "status": "Concluído",
-      "featured": true
-    },
-    {
-      "slug": "form-animated",
-      "name": "Animated Form",
-      "description": "Formulário HTML/CSS com animações modernas",
-      "longDescription": "Formulário web responsivo com animações CSS modernas, validação visual e design atraente.",
-      "imageUrl": "/images/projects/form-animated.png",
-      "demoUrl": "",
-      "gitHubUrl": "https://github.com/pedrohendp/form-html-css-animated",
-      "technologies": ["HTML5", "CSS3", "JavaScript"],
-      "status": "Concluído",
-      "featured": false
-    },
-    {
-      "slug": "profile-card",
-      "name": "Profile Card Contact",
-      "description": "Card de perfil com formulário de contato",
-      "longDescription": "Componente de card de perfil responsivo com integração de formulário de contato, desenvolvido com HTML e CSS puros.",
-      "imageUrl": "/images/projects/profile-card.png",
-      "demoUrl": "",
-      "gitHubUrl": "https://github.com/pedrohendp/profile-card-contactus-html-css",
-      "technologies": ["HTML5", "CSS3"],
-      "status": "Concluído",
-      "featured": false
     }
   ]
 }
