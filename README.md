@@ -1,26 +1,37 @@
 # Pedro Arruda Portfolio
 
-Portfolio profissional desenvolvido com ASP.NET Core (Backend) e React + TypeScript (Frontend), com tema escuro inspirado no Swagger UI.
+Portfólio profissional desenvolvido com ASP.NET Core (back-end) e React + TypeScript (front-end), com tema escuro inspirado no Swagger UI.
+
+**Site:** https://pedrohendp.github.io/Arruda/
 
 ## Stack
 
-- **Backend:** ASP.NET Core 8, Minimal API, Swagger/OpenAPI
-- **Frontend:** React 18, TypeScript, Vite
-- **Estilo:** CSS Modules com tema dark Swagger
+- **Back-end:** ASP.NET Core 8, Minimal API, Swagger/OpenAPI (Swashbuckle)
+- **Front-end:** React 19, TypeScript, Vite 7
+- **Estilo:** CSS Modules com tema dark inspirado no Swagger
 
 ## Estrutura
 
 ```
-Portfolio-Pedro-Arruda/
+Arruda/
 ├── backend/
-│   └── PedroArruda.Portfolio.Api/    # API .NET
-├── frontend/                          # React App
-└── .github/workflows/                 # GitHub Actions
+│   ├── Dockerfile                     # Imagem usada no deploy do Render
+│   └── PedroArruda.Portfolio.Api/     # API .NET
+├── frontend/                          # App React
+├── render.yaml                        # Blueprint do Render (API)
+└── .github/workflows/                 # Deploy do front-end no GitHub Pages
 ```
 
-## Desenvolvimento Local
+### Onde ficam os dados
 
-### Backend
+O conteúdo do site (bio, skills e projetos) fica em dois arquivos, que devem ser mantidos iguais:
+
+- `frontend/src/data/portfolio-data.ts`: dados estáticos usados pelo site publicado
+- `backend/PedroArruda.Portfolio.Api/Data/portfolio-data.json`: dados servidos pela API
+
+## Desenvolvimento local
+
+### Back-end
 
 ```bash
 cd backend/PedroArruda.Portfolio.Api
@@ -29,7 +40,7 @@ dotnet run
 
 API: `http://localhost:5150` | Swagger: `http://localhost:5150/swagger`
 
-### Frontend
+### Front-end
 
 ```bash
 cd frontend
@@ -37,78 +48,51 @@ npm install
 npm run dev
 ```
 
-Frontend: `http://localhost:5173`
+Front-end: `http://localhost:5173`
 
 ---
 
 ## Deploy
 
-### Frontend - GitHub Pages (Automático)
+### Front-end: GitHub Pages (automático)
 
-O deploy é feito automaticamente via GitHub Actions quando você faz push para `main`.
+O workflow `.github/workflows/deploy-frontend.yml` publica o site a cada push na `main`.
 
-**URL:** https://pedrohendp.github.io/Portfolio-Pedro-Arruda/
+**URL:** https://pedrohendp.github.io/Arruda/
 
-#### Configuração Inicial (uma vez):
+O caminho diferencia maiúsculas: `/Arruda/` funciona, `/arruda/` dá 404.
 
-1. Acesse: `Settings > Pages` no repositório
-2. Em **Source**, selecione: **GitHub Actions**
-3. Salve
+Configuração inicial (uma vez só): em `Settings > Pages`, selecione **GitHub Actions** em **Source**.
 
-### Backend - Render (Gratuito)
+### Back-end: Render (opcional, plano gratuito)
 
-#### Passo 1: Criar conta no Render
+O `render.yaml` na raiz já descreve o serviço. No Render:
 
-1. Acesse [render.com](https://render.com) e crie uma conta (pode usar GitHub)
+1. Clique em **New > Blueprint** e conecte o repositório `pedrohendp/Arruda`
+2. Confirme o serviço `portfolio-api` (Docker, plano Free)
+3. Aguarde o deploy; a API fica em `https://portfolio-api-xxxx.onrender.com`
 
-#### Passo 2: Criar Web Service
+### Conectar o front-end à API (opcional)
 
-1. Clique em **New > Web Service**
-2. Conecte seu repositório GitHub `Portfolio-Pedro-Arruda`
-3. Configure:
-   - **Name:** `portfolio-api`
-   - **Region:** escolha a mais próxima
-   - **Branch:** `main`
-   - **Root Directory:** `backend`
-   - **Runtime:** `Docker`
-   - **Instance Type:** `Free`
+Sem configuração nenhuma, o site usa os dados estáticos do front-end. Para usar a API do Render:
 
-4. Clique em **Create Web Service**
+1. Em `Settings > Secrets and variables > Actions > Variables`, crie a variável `VITE_API_URL` com o valor `https://portfolio-api-xxxx.onrender.com/api`
+2. Faça um push na `main` (ou rode o workflow manualmente) para republicar
 
-#### Passo 3: Aguardar Deploy
-
-O Render vai buildar e deployar automaticamente. Pode levar alguns minutos.
-
-**URL da API:** `https://portfolio-api-xxxx.onrender.com`
-
-#### Passo 4: (Opcional) Conectar Frontend à API
-
-Se quiser que o frontend use a API do Render em vez de dados estáticos:
-
-1. No repositório, vá em `Settings > Secrets and variables > Actions`
-2. Adicione uma variável:
-   - **Name:** `VITE_API_URL`
-   - **Value:** `https://portfolio-api-xxxx.onrender.com/api`
-
-3. Atualize o workflow `.github/workflows/deploy-frontend.yml`:
-   ```yaml
-   - name: Build
-     working-directory: ./frontend
-     env:
-       VITE_API_URL: ${{ vars.VITE_API_URL }}
-     run: npm run build
-   ```
+O workflow já lê essa variável no build.
 
 ---
 
-## API Endpoints
+## Endpoints da API
 
 | Método | Rota | Descrição |
 |--------|------|-----------|
 | GET | /api/developer | Dados do desenvolvedor |
 | GET | /api/skills | Lista de skills |
 | GET | /api/projects | Lista de projetos |
+| GET | /api/projects/featured | Projetos em destaque |
 | GET | /api/projects/{slug} | Detalhes do projeto |
+| GET | /api/contact/info | Dados de contato |
 | POST | /api/contact | Enviar mensagem |
 | GET | /api/health | Status da API |
 
@@ -116,8 +100,9 @@ Se quiser que o frontend use a API do Render em vez de dados estáticos:
 
 ## Autor
 
-**Pedro Arruda** - Backend Developer | C# & .NET Specialist
+**Pedro Arruda**: Backend Developer | C# & .NET
 
+- Site: https://pedrohendp.github.io/Arruda/
 - GitHub: [@pedrohendp](https://github.com/pedrohendp)
-- LinkedIn: [/in/pedrohendp](https://linkedin.com/in/pedrohendp)
+- LinkedIn: [/in/pedrohendp](https://www.linkedin.com/in/pedrohendp/)
 - Email: pedrohendp@gmail.com
